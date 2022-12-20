@@ -1,4 +1,4 @@
 
-public class JogadorRandomico {
+public class JogadorRandomico extends JogadorAbstrato{
 
 }
