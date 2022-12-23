@@ -9,7 +9,7 @@ public class Carta{
 	private String codigo;
 	private String extra;
 	private Atributos valor;
-	Carta(){}
+	public Carta(){}
 	
 	public String toString() {
 		String textojogo = "";
