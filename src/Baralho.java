@@ -1,4 +1,11 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
+import java.io.*;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.BufferedReader;
 
 @SuppressWarnings("serial")
 public class Baralho extends LinkedList<Carta>{
@@ -9,7 +16,70 @@ public class Baralho extends LinkedList<Carta>{
 		this.carregar();
 	}
 	
-	public void carregar() {}
+	public void carregar() {
+		try {
+			File diretorio = new File("Cartas");
+			File cartas = new File(diretorio,tema.concat(".txt"));
+			BufferedReader leitor = new BufferedReader(new FileReader(cartas));
+			int i = 0;
+			String s = null;
+			Carta carta = new Carta("", "");
+			Atributos valor = new Atributos();
+			while((s = leitor.readLine()) != null) {
+				String texto = s;
+				if (i == 0 || i == 1) {
+					List<String> atributos = new ArrayList();
+					while (texto.isEmpty() == false) {
+						if (texto.contains("#") == false) {
+							atributos.add(texto);
+							texto = "";
+						}
+						else{
+							for (int j = 0; j < texto.length(); j++){
+								if (texto.substring(j,j+1).equals("#")) {
+									atributos.add(texto.substring(0,j));
+									texto = texto.substring(j+1,texto.length());
+									break;
+								}
+							}
+						}
+					}
+					if (i == 0) 
+						Carta.setAtributos(atributos);
+					else 
+						Carta.setUnidade(atributos);
+					}
+				else {
+					
+					List<String> dados = new ArrayList();
+					while (texto.isEmpty() == false) {
+						if (texto.contains("#") == false) {
+							dados.add(texto);
+							texto = "";
+						}
+						else{
+							for (int j = 0; j < texto.length(); j++){
+								if (texto.substring(j,j+1).equals("#")) {
+									dados.add(texto.substring(0,j));
+									texto = texto.substring(j+1,texto.length());
+									break;
+								}
+							}
+						}
+					}
+					carta = new Carta(dados.get(0),dados.get(1));
+					valor.setValor(dados.subList(2,dados.size()));
+					carta.setValor(valor);
+					this.add(carta);
+				}
+				i++;
+			}
+			leitor.close();
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	
 	public void embaralhar() {
 		Collections.shuffle(this);
@@ -50,7 +120,7 @@ public class Baralho extends LinkedList<Carta>{
 			return this.getFirst();
 		}
 		else {
-			Carta carta = new Carta();
+			Carta carta = new Carta("", "");
 			return carta;
 		}
 	}

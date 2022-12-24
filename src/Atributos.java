@@ -1,14 +1,14 @@
 import java.util.List;
 
 public class Atributos {
-	private List<Number> valor;
+	private List<String> valor;
 	
 	public Atributos(){}
 
-	public List<Number> getValor() {
+	public List<String> getValor() {
 		return this.valor;
 	}
-	public void setValor(List<Number> valor) {
+	public void setValor(List<String> valor) {
 		this.valor = valor;
 	}
 

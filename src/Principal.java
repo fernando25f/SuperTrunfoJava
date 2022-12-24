@@ -30,5 +30,7 @@ public class Principal {
 		for (int i = 0; i < lista.size(); i++) {
 			System.out.println(lista.get(i));
 		}*/
+		Baralho baralho = new Baralho("Dinossauro");
+		baralho.listarCartas();
 	}
 }

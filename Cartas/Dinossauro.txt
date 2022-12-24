@@ -1,0 +1,34 @@
+Altura#Comprimento#Peso#Viveu ha
+m#m#kg#milhoes de anos
+1A#Herrerassauro#1.5#4.5#300#300
+2A#Pterodactilo#0.5#1.0#1#150
+3A#Plateossauro#2.0#9.0#4000#221
+4A#Ultrassauro#22.0#38.0#90000#154
+5A#Coelophisis#1.8#3.0#30#227
+6A#Othnielia#1.1#1.5#40#146
+7A#Boraptor#0.8#1.0#10#231
+8A#Oftalmossauro#1.3#5.0#3000#165
+1B#Procompsognato#0.3#1.2#1#222
+2B#Velocirraptor#1.0#1.8#15#80
+3B#Peteinossauro#0.3#0.6#0.2#210
+4B#T-Rex#5.6#14.0#7000#68************
+5B#Melanorossauro#12.0#15.0#8000#228
+6B#Carcharodontossauro#5.8#14.0#8000#113
+7B#Nothossauro#8.0#9.0#400#220
+8B#Psitacossauro#0.7#2.0#25#125
+1C#Patagossauro#8.0#18.0#16000#169
+2C#Triceratopo#6.0#9.0#6000#68
+3C#Estegossauro#4.0#9.0#2000#156
+4C#Carnotauro#3.0#7.5#1000#113
+5C#Brachiossauro#15.0#28.0#50000#156
+6C#Barionix#8.0#12.0#2000#125
+7C#Diplodoco#5.0#27.0#20000#156
+8C#Ovirraptor#1.3#2.5#35#80
+1D#Ceratossauro#2.0#6.0#1000#156
+2D#Baptornis#0.8#1.0#7#83
+3D#Alossauro#5.2#14.0#3600#156
+4D#Iberomesornis#0.2#0.1#0.03#125
+5D#Dilofossauro#2.5#7.0#450#206
+6D#Hylaeossauro#1.8#5.0#1500#130
+7D#Compsognato#0.7#1.0#2#156
+8D#Globdens#1.1#6.0#400#150

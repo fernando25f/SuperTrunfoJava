@@ -9,20 +9,17 @@ public class Carta{
 	private String codigo;
 	private String extra;
 	private Atributos valor;
-	public Carta(){}
+	public Carta(String codigo, String nome){
+		this.nome = nome;
+		this.codigo = codigo;
+	}
 	
 	public String toString() {
 		String textojogo = "";
 		for (int i = 0; i < atributos.size(); i++) {
-			if (valor.getValor().get(i) instanceof Double) {
-				textojogo.concat(";\n" + atributos.get(i) + ": " + valor.getValor().get(i).intValue() + " " + unidade.get(i));
-			}
-			if (valor.getValor().get(i) instanceof Integer) {
-				textojogo.concat(";\n" + atributos.get(i) + ": " + valor.getValor().get(i).intValue() + " " + unidade.get(i));
-			}
+			textojogo = textojogo + ";\n" + atributos.get(i) + ": " + valor.getValor().get(i)+ " " + unidade.get(i);
 		}
-		String texto = "Codigo: " + this.codigo + ";\nNome: " + this.nome + 
-				";\nExtra: " + this.extra + textojogo;
+		String texto = "Codigo: " + this.codigo + ";\nNome: " + this.nome + textojogo;
 		return texto;
 	}
 	
