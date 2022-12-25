@@ -15,6 +15,7 @@ public class Baralho extends LinkedList<Carta>{
 		this.tema = tema;
 	}
 	
+	@SuppressWarnings("rawtypes")
 	public void carregar() {
 		try {
 			File diretorio = new File("Cartas");
@@ -22,61 +23,39 @@ public class Baralho extends LinkedList<Carta>{
 			BufferedReader leitor = new BufferedReader(new FileReader(cartas));
 			int i = 0;
 			String s = null;
-			List<Carta> baralho = new ArrayList();
 			while((s = leitor.readLine()) != null) {
 				String texto = s;
-				if (i == 0 || i == 1) {
-					List<String> atributos = new ArrayList();
-					while (texto.isEmpty() == false) {
-						if (texto.contains("#") == false) {
-							atributos.add(texto);
-							texto = "";
-						}
-						else{
-							for (int j = 0; j < texto.length(); j++){
-								if (texto.substring(j,j+1).equals("#")) {
-									atributos.add(texto.substring(0,j));
-									texto = texto.substring(j+1,texto.length());
-									break;
-								}
+				@SuppressWarnings("unchecked")
+				List<String> atributos = new ArrayList();
+				while (texto.isEmpty() == false) {
+					if (texto.contains("#") == false) {
+						atributos.add(texto);
+						texto = "";
+					}
+					else{
+						for (int j = 0; j < texto.length(); j++){
+							if (texto.substring(j,j+1).equals("#")) {
+								atributos.add(texto.substring(0,j));
+								texto = texto.substring(j+1,texto.length());
+								break;
 							}
 						}
 					}
-					if (i == 0) 
-						Carta.setAtributos(atributos);
-					else 
-						Carta.setUnidade(atributos);
-					}
+				}
+				if (i == 0) 
+					Carta.setAtributos(atributos);
+				else if (i == 1)
+					Carta.setUnidade(atributos);
 				else {
-					
-					List<String> dados = new ArrayList();
-					while (texto.isEmpty() == false) {
-						if (texto.contains("#") == false) {
-							dados.add(texto);
-							texto = "";
-						}
-						else{
-							for (int j = 0; j < texto.length(); j++){
-								if (texto.substring(j,j+1).equals("#")) {
-									dados.add(texto.substring(0,j));
-									texto = texto.substring(j+1,texto.length());
-									break;
-								}
-							}
-						}
-					}
-					Carta carta = new Carta(dados.get(0),dados.get(1));
-					carta.setCodigo(dados.get(0));
-					carta.setNome(dados.get(1));
+					Carta carta = new Carta(atributos.get(0),atributos.get(1));
 					Atributos valor = new Atributos();
-					valor.setValor(dados.subList(2,dados.size()));
+					valor.setValor(atributos.subList(2,atributos.size()));
 					carta.setValor(valor);	
 					this.add(carta);
 				}
 				i++;
 			}
 			leitor.close();
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -88,8 +67,12 @@ public class Baralho extends LinkedList<Carta>{
 		
 	public void distribuir(JogadorAbstrato[] jogadores) {
 		int qJogadores = jogadores.length;
-		Baralho jogador[] = new Baralho[qJogadores];
+		Baralho[] jogador = new Baralho[qJogadores];
 		int i = 0;
+		for (i = 0; i < qJogadores; i++) {
+			jogador[i] = new Baralho(this.getTema());
+		}
+		i = 0;
 		while (this.isEmpty() == false) {
 			jogador[i].add(this.getFirst());
 			this.removeFirst();
@@ -109,7 +92,6 @@ public class Baralho extends LinkedList<Carta>{
 			for (int i = 0; i < this.size(); i++) {
 				System.out.println(this.get(i).toString());
 			}
-			System.out.print("\n\n");
 		}
 		else {
 			System.out.println("Não há mais cartas");

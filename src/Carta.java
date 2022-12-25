@@ -17,9 +17,10 @@ public class Carta{
 	public String toString() {
 		String textojogo = "";
 		for (int i = 0; i < atributos.size(); i++) {
-			textojogo = textojogo + ";\n" + atributos.get(i) + ": " + valor.getValor().get(i)+ " " + unidade.get(i);
+			textojogo = textojogo + "\n" + atributos.get(i) + ": " + valor.getValor().get(i)+ " " + unidade.get(i);
 		}
-		String texto = "Codigo: " + this.codigo + ";\nNome: " + this.nome + textojogo;
+		String texto = "--------------------------------\n" + "Codigo: " + this.codigo + "  Nome: " + this.nome + "\n--------------------------------" + textojogo + "\n";
+		texto = texto + "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=\n";
 		return texto;
 	}
 	

@@ -1,25 +1,25 @@
 
 public abstract class JogadorAbstrato {
-	protected String nome;
-	protected Baralho monte;
+	private String nome;
+	private Baralho monte;
 		
 	//Sobrecarga do Construtor
 	public JogadorAbstrato(String nome) {this.nome = nome;}
 	public JogadorAbstrato() {}
 	
-	protected String getNome() {
+	public String getNome() {
 		return nome;
 	}
 	
-	protected void setNome(String nome) {
+	public void setNome(String nome) {
 		this.nome = nome;
 	}
 	
-	protected Baralho getMonte() {
+	public Baralho getMonte() {
 		return monte;
 	}
 	
-	protected void setMonte(Baralho monte) {
+	public void setMonte(Baralho monte) {
 		this.monte = monte;
 	}
 
