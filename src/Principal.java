@@ -31,6 +31,11 @@ public class Principal {
 			System.out.println(lista.get(i));
 		}*/
 		Baralho baralho = new Baralho("Dinossauro");
-		baralho.listarCartas();
+		baralho.carregar();
+		//baralho.embaralhar();
+		//baralho.listarCartas();
+		System.out.println("1A -- Altura: " + baralho.get(0).getValor().getValor().get(0));
+		System.out.println("2A -- Altura: " + baralho.get(1).getValor().getValor().get(0));
+		
 	}
 }

@@ -13,7 +13,6 @@ public class Baralho extends LinkedList<Carta>{
 	
 	public Baralho(String tema) {
 		this.tema = tema;
-		this.carregar();
 	}
 	
 	public void carregar() {
@@ -23,8 +22,7 @@ public class Baralho extends LinkedList<Carta>{
 			BufferedReader leitor = new BufferedReader(new FileReader(cartas));
 			int i = 0;
 			String s = null;
-			Carta carta = new Carta("", "");
-			Atributos valor = new Atributos();
+			List<Carta> baralho = new ArrayList();
 			while((s = leitor.readLine()) != null) {
 				String texto = s;
 				if (i == 0 || i == 1) {
@@ -67,9 +65,12 @@ public class Baralho extends LinkedList<Carta>{
 							}
 						}
 					}
-					carta = new Carta(dados.get(0),dados.get(1));
+					Carta carta = new Carta(dados.get(0),dados.get(1));
+					carta.setCodigo(dados.get(0));
+					carta.setNome(dados.get(1));
+					Atributos valor = new Atributos();
 					valor.setValor(dados.subList(2,dados.size()));
-					carta.setValor(valor);
+					carta.setValor(valor);	
 					this.add(carta);
 				}
 				i++;
