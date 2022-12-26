@@ -19,7 +19,7 @@ public class Carta{
 		for (int i = 0; i < atributos.size(); i++) {
 			textojogo = textojogo + "\n" + atributos.get(i) + ": " + valor.getValor().get(i)+ " " + unidade.get(i);
 		}
-		String texto = "--------------------------------\n" + "Codigo: " + this.codigo + "  Nome: " + this.nome + "\n--------------------------------" + textojogo + "\n";
+		String texto = "--------------------------------\n" + "" + this.codigo + " " + this.nome + "\n--------------------------------" + textojogo + "\n";
 		texto = texto + "+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=+=\n";
 		return texto;
 	}

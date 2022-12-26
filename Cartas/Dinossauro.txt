@@ -11,7 +11,7 @@ m#m#kg#milhoes de anos
 1B#Procompsognato#0.3#1.2#1#222
 2B#Velocirraptor#1.0#1.8#15#80
 3B#Peteinossauro#0.3#0.6#0.2#210
-4B#T-Rex#5.6#14.0#7000#68************
+4B#T-Rex#5.6#14.0#7000#68
 5B#Melanorossauro#12.0#15.0#8000#228
 6B#Carcharodontossauro#5.8#14.0#8000#113
 7B#Nothossauro#8.0#9.0#400#220

@@ -92,9 +92,10 @@ public class Baralho extends LinkedList<Carta>{
 			for (int i = 0; i < this.size(); i++) {
 				System.out.println(this.get(i).toString());
 			}
+			System.out.printf("Ha %d cartas ainda\n\n", this.size());
 		}
 		else {
-			System.out.println("Não há mais cartas");
+			System.out.println("Nao ha mais cartas");
 		}
 	}
 	
