@@ -5,5 +5,6 @@ public class Principal {
 		jogadores[0] = new JogadorReal("Pessoa");
 		jogadores[1] = new JogadorRandomico();
 		new Jogo(jogadores, "Dinossauro");
+		new Tela();
 	}
 }

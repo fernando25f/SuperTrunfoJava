@@ -9,10 +9,10 @@ import java.io.BufferedReader;
 
 @SuppressWarnings("serial")
 public class Baralho extends LinkedList<Carta>{
-	private String tema;
-	
+	private static String tema;
+	private static String trunfo;
 	public Baralho(String tema) {
-		this.tema = tema;
+		setTema(tema);
 	}
 	
 	@SuppressWarnings("rawtypes")
@@ -46,10 +46,14 @@ public class Baralho extends LinkedList<Carta>{
 					Carta.setAtributos(atributos);
 				else if (i == 1)
 					Carta.setUnidade(atributos);
+				else if (i == 2) {
+					setTrunfo(atributos.get(0));
+				}
 				else {
 					Carta carta = new Carta(atributos.get(0),atributos.get(1));
+					carta.setExtra(atributos.get(2));
 					Atributos valor = new Atributos();
-					valor.setValor(atributos.subList(2,atributos.size()));
+					valor.setValor(atributos.subList(3,atributos.size()));
 					carta.setValor(valor);	
 					this.add(carta);
 				}
@@ -70,7 +74,7 @@ public class Baralho extends LinkedList<Carta>{
 		Baralho[] jogador = new Baralho[qJogadores];
 		int i = 0;
 		for (i = 0; i < qJogadores; i++) {
-			jogador[i] = new Baralho(this.getTema());
+			jogador[i] = new Baralho(getTema());
 		}
 		i = 0;
 		while (this.isEmpty() == false) {
@@ -109,11 +113,19 @@ public class Baralho extends LinkedList<Carta>{
 		}
 	}
 	
-	public String getTema() {
-		return tema;
+	public static String getTema() {
+		return Baralho.tema;
 	}
-	public void setTema(String tema) {
-		this.tema = tema;
+	public static void setTema(String tema) {
+		Baralho.tema = tema;
+	}
+
+	public static String getTrunfo() {
+		return trunfo;
+	}
+
+	public static void setTrunfo(String trunfo) {
+		Baralho.trunfo = trunfo;
 	}
 	
 }
