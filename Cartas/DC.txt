@@ -1,0 +1,35 @@
+Força#Habilidade#Velocidade#Poderes#Fator de Cura
+(1-50)#(1-100)#(1-20)#(1-50)#(1-100)
+2C
+1A#Pistoleiro# #10#80#6#10#20
+2A#Alerquina# #5#75#6#5#10
+3A#Flash# #20#100#20#40#80
+4A#Exterminador# #20#85#8#10#35
+5A#Capitão-Átomo# #25#65#14#25#30
+6A#Mulher-Gato# #10#85#7#5#15
+7A#Espantalho# #50#5#5#10
+8A#Sinestro# #35#70#17#35#50
+1B#Gavião-Negro# #20#70#17#30#65
+2B#Batman# #15#85#8#10#30
+3B#Duas-Caras# #10#55#5#5#10
+4B#Caçador-De-Marte# #40#65#15#40#70
+5B#Katana# #10#80#7#10#25
+6B#Robin# #10#70#7#5#10
+7B#Supergirl# #45#85#18#40#80
+8B#Bene# #25#65#3#25#65
+1C#Apocalypse# #50#55#17#45#75
+2C#SuperMan# #50#95#20#45#80
+3C#BatGirl# #5#65#6#5#10
+4C#Shazam# #45#70#19#40#75
+5C#Arqueiro-Verde# #10#80#8#10#30
+6C#Coringa# #10#75#5#5#10
+7C#Mulher-Maravilha# #45#90#18#45#80
+8C#Cyborg# #25#70#10#35#65
+1D#Charada# #10#60#5#5#10
+2D#Pinguim# #5#50#3#5#10
+3D#Lex-Luthor# #10#65#5#5#10
+4D#Aquaman# #35#90#17#40#65
+5D#Crocodilo# #20#60#3#25#60
+6D#Hera-Venenosa# #5#60#4#15#25
+7D#General-Zod# #45#90#18#45#80
+8D#Lanterna-Verde# #35#70#17#35#50

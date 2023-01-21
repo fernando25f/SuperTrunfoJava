@@ -53,7 +53,6 @@ public class Jogo {
 				verificador = true;
 			}
 		}
-		System.out.println("Trunfo");
 		return verificador;
 	}
 	public static int procurarTrunfo() {
@@ -71,7 +70,6 @@ public class Jogo {
 			if (jogadores[i].getMonte().pegarTopo().getCodigo().substring(1,2).equals(""))
 				verificador = true;		
 		}
-		System.out.println("Carta A");
 		return verificador;
 	}
 	

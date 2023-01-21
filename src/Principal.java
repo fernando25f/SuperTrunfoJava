@@ -4,7 +4,7 @@ public class Principal {
 		JogadorAbstrato[] jogadores = new JogadorAbstrato[2];
 		jogadores[0] = new JogadorReal("Pessoa");
 		jogadores[1] = new JogadorRandomico();
-		new Jogo(jogadores, "Dinossauro");
+		new Jogo(jogadores, "DC");
 		new Tela();
 	}
 }

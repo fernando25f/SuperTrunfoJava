@@ -1,0 +1,35 @@
+Altura#Inteligência#Força#Velocidade#Habilidade
+cm# # # # 
+1B
+2A#Capitão América# #186#4#29#6#86
+2B#Elektra# #173#4#15#6#80
+1A#Hulk# #210#2#50#6#73
+3D#Mulher Invisível# #165#3#23#2#70
+1B#Homem Aranha# #175#7#36#11#66
+2D#Tocha Humana# #175#4#26#5#71
+6A#Ciclope# #183#4.5#30#6#80
+8B#Fênix# #165#5#26#4#75
+4D#Dr. Destino# #186#8#48#4#70
+6D#Viúva Negra# #168#4#26#4#81
+6B#Venon# #188#3#38#10#69
+4C#Duende Verde# #178#6#35#10#55
+4B#Thor# #195#4#49#9#85
+3C#Sr. Fantástico# #183#9#23#2#65
+5D#Justiceiro# #180#4#30#3#92
+7A#Fanático# #205#3#48#2#63
+3A#Homem de Ferro# #183#6#48#2#85
+3B#Tempestade# #178#4#27#12#58
+2C#Coisa# #180#3#47#8#35
+5B#Dr. Octopus# #173#7#23#2#50
+5A#Motoqueiro Fantasma# #181#3#37#8#66
+7D#Mística# #175#6#25#6#76
+6C#Blade# #185#3#29#5#85
+7B#Homem Gelo# #170#3#28#4#70
+8D#Galactus# #862#10#50#20#55
+4A#Surfista Prateado# #190#4#46#13#72
+1C#Wolverine# #158#5#35#6#95
+5C#Magneto# #185#8#46#2#81
+7C#Rei do Crime# #198#7#30#4#75
+1D#Demolidor# #180#5#23#3#88
+8A#Mulher-Hulk# #198#4#48#3#72
+8C#Capitão Marvel# #185#3#35#20#62
