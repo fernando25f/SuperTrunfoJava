@@ -27,7 +27,7 @@ public class Tela extends JFrame {
 		qJogadores = Jogo.getJogadores().length;
 		qAtributos = Carta.getAtributos().size();
 		cartas = new JPanel[qJogadores];
-		label = new JLabel[3];
+		label = new JLabel[4];
 		atributos = new JLabel[qAtributos];
 		setTitle("Supertrunfo");
 		setSize(WIDTH, HEIGHT);
@@ -74,7 +74,12 @@ public class Tela extends JFrame {
 			label[1].setBounds(10,70,200,30);
 			label[2] = new JLabel(Jogo.getJogadores()[i].getMonte().pegarTopo().getExtra());
 			label[2].setBounds(10,85,200,30);
-			for (int j = 0; j < 3; j++) 
+			if (Jogo.getJogadores()[i].getMonte().pegarTopo().getCodigo() == Baralho.getTrunfo()) {
+				label[3] = new JLabel("Trunfo");
+				label[3].setBounds(10,100,200,30);
+			}
+			
+			for (int j = 0; j < 4; j++) 
 				cartas[i].add(label[j]);
 			for (int j = 0; j < qAtributos; j++) {
 				String texto = Carta.getAtributos().get(j) + ": " +
@@ -110,7 +115,15 @@ public class Tela extends JFrame {
 				label[1].setBounds(10,70,200,30);
 				label[2] = new JLabel(Jogo.getJogadores()[i].getMonte().pegarTopo().getExtra());
 				label[2].setBounds(10,85,200,30);
-				for (int j = 0; j < 3; j++) 
+				if (Jogo.getJogadores()[i].getMonte().pegarTopo().getCodigo() == Baralho.getTrunfo()) {
+					label[3] = new JLabel("Trunfo");
+					label[3].setBounds(10,100,200,30);
+				}
+				else {
+					label[3] = new JLabel("");
+					label[3].setBounds(10,100,200,30);
+				}
+				for (int j = 0; j < 4; j++) 
 					cartas[i].add(label[j]);
 				for (int j = 0; j < qAtributos; j++) {
 					String texto = Carta.getAtributos().get(j) + ": " +
